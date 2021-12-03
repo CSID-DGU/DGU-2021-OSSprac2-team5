@@ -2,27 +2,18 @@
 <html>
 <head>
   <meta charset="utf-8"/>
-  <title>Cocoon</title>
+  <title>sign_up</title>
 </head>
 <body>
 
   <section>
-    <h1>회원가입 페이지</h1>
+    <h1>OSSP 회원가입</h1>
   </section>
 
   <section>
     <form name="login" action="index.html" method="post">
-      아이디확인<br>
-      <input type="text" name="user_ID" placeholder="아이디 입력" >
-      <input type="button" name="user_IDcheck" value="아이디 확인">
-      <br>
-      비밀번호<br>
-      <input type="password" name="user_PW1" value="123456"><br>
-      비밀번호 재확인<br>
-      <input type="password" name="user_PW2" value="123456">
-      <input type="button" name="user_PWcheck" value="비밀번호 재확인">
-      <br><br>
-      이름<br>  <input type="text" name="user_name" value=""> <br>
+
+      이름<br>  <input type="text" name="user_name" placeholder="이름 입력" value=""> <br>
       생년월일<br> 
       <select name="year">
         <option value="">-- 선택 --</option>
@@ -81,29 +72,45 @@
         <option value="29">29</option>
         <option value="30">30</option>
         <option value="31">31</option>
-      </select>
-      <br><br>
+      </select><br>
       성별<br>
       <label for="man">남자</label>
       <input type="radio" name="gender" value="m" id="man">
       <label for="woman">여자</label>
       <input type="radio" name="gender" value="m" id="woman"> <br><br>
-      이메일<br><input type="email" name="user_email" placeholder="email@gmail.com"><br><br>
-      휴대전화<br>
-      <input type="text" name="user_phone" placeholder="010-****-****">
-      <input type="button" name="certification" value="인증번호 받기"><br>
-      <input type="text" name="certification" placeholder="인증번호를 입력하세요">
-      <input type="button" name="certification" value="확인"><br><br>
-      관심사<br>
-      IT<input type="checkbox" name="check" value="hobby1">
-      보안<input type="checkbox" name="check" value="hobby2">
-      웹<input type="checkbox" name="check" value="hobby3">
-      서버<input type="checkbox" name="check" value="hobby4">
+
+      학부<br> 
+      <select name="year">
+        <option value="">-- 선택 --</option>
+        <option value="연계전공">연계전공</option>
+        <option value="문과대학">문과대학</option>
+        <option value="이과대학">이과대학</option>
+        <option value="경영대학">경영대학</option>
+        <option value="공과대학">공과대학</option>
+        <option value="기타">기타</option>
+
+
+      </select><br><br> 
+
+      ID<br>
+      <input type="text" name="user_ID" placeholder="ID 입력" >
+      <br>
+      PASSWORD<br>
+      <input type="password" name="user_PW1" value="123456"><br>
+      PASSWORD 재확인<br>
+      <input type="password" name="user_PW2" value="123456">
       <br><br>
-      본인 사진 <br>
-      <input type="file" name="" value="">
-      <br><br><br>
-      <input type="submit" name="" value="제출">
+
+      이메일<br><input type="email" name="user_email" placeholder="email@gmail.com"><br>
+      휴대전화<br>
+      <input type="text" name="user_phone" placeholder="010-****-****"><br>
+      이메일 문자 수신여부<br>
+      <label for="man">수락</label>
+      <input type="radio" name="gender" value="m" id="man">
+      <label for="woman">거부</label>
+      <input type="radio" name="gender" value="m" id="woman"> <br><br>
+
+      <p><input type="button" value="SUBMIT" onClick="history.go(-1)">
 
     </form>
   </section>
