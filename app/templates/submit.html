@@ -1,5 +1,11 @@
 <!doctype html>
 <html>
+
+   <h1>{{umajor}} {{Grade}} {{uname}}님, <br>설문조사가 완료되었습니다</h1>
+   <p>작성하신 내용은 아래와 같습니다</p>
+
+   <hr style = "border: solid 2px blue">
+
    <body>
    
       <table border = 1>
@@ -12,6 +18,6 @@
             
          {% endfor %}
       </table>
-      
+      <input type = "button" value = "로그아웃" onclick="location.href = '/'">
    </body>
 </html>

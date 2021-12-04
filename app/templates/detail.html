@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+   <body>
+      <h2>작성하신 답안을 제출하시겠습니까?</h2>
+
+      <form action = "/submit" method = "POST">
+         <table border = 1>
+            {% for key, value in result.items() %}
+         
+               <tr>
+                  <th> {{ key }} </th>
+                  <td> <input type="text" name={{ key }} value={{ value }} readonly> </td>
+               </tr>
+            
+            {% endfor %}
+         </table>
+         
+         <p><input type="button" value="다시 입력" onClick="history.go(-1)"> <input type = "submit" value = "제출" /></p>
+      </form>
+
+   </body>
+</html>
