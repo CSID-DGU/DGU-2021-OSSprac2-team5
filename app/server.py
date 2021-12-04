@@ -14,7 +14,7 @@ def login():
          error = 'Incorrect authentication credentials! Please try again. '
       else:
          return render_template('application_form.html')
-​
+
    return render_template("login.html", error = error)
 
 @app.route('/sign_up')
