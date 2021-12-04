@@ -6,14 +6,26 @@ app = Flask(__name__)
 def main():
    return render_template('main.html')
 
+@app.route('/login')
+def login():
+   return render_template('login.html')
+
+@app.route('/sign up')
+def sign():
+   return render_template('sign up.html')
+
+@app.route('/application form')
+def apllication():
+   return render_template('application form.html')
+
 @app.route('/detail', methods = ['POST', 'GET'])
 def detail():
    if request.method == 'POST':
       result = dict()
       result['Name'] = request.form.get('Name')
       result['Major'] = request.form.get('Major')
-      result['Year'] = request.form.get('Year')
-      result['Desire_metod'] = request.form.get('Desire_metod')
+      result['Grade'] = request.form.get('Grade')
+      result['Desire_method'] = request.form.get('Desire_method')
       result['Vaccine'] = request.form.get('Vaccine')
       result['Reason'] = request.form.get('Reason')
       return render_template("detail.html",result = result)
@@ -27,11 +39,11 @@ def submit():
       result = dict()
       result['Name'] = request.form.get('Name')
       result['Major'] = request.form.get('Major')
-      result['Year'] = request.form.get('Year')
-      result['Desire_metod'] = request.form.get('Desire_metod')
+      result['Grade'] = request.form.get('Grade')
+      result['Desire_method'] = request.form.get('Desire_method')
       result['Vaccine'] = request.form.get('Vaccine')
       result['Reason'] = request.form.get('Reason')
-      return render_template("submit.html",result = result, uname=uname, uyear=uyear, umajor=umajor)
+      return render_template("submit.html",result = result, uname=uname, Grade=Grade, umajor=umajor)
 
 if __name__ == '__main__':
    app.run(host="0.0.0.0", debug=True, port=80)

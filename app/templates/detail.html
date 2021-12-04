@@ -2,7 +2,7 @@
 <html>
    <body>
 
-      <form action = "/result" method = "POST">
+      <form action = "/submit" method = "POST">
          <table border = 1>
             {% for key, value in result.items() %}
          
@@ -14,7 +14,7 @@
             {% endfor %}
          </table>
          
-         <p><input type="button" value="MODIFY" onClick="history.go(-1)"> <input type = "submit" value = "SUBMIT" /></p>
+         <p><input type="button" value="다시 입력" onClick="history.go(-1)"> <input type = "submit" value = "제출" /></p>
       </form>
 
    </body>
