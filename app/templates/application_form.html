@@ -3,9 +3,29 @@
   <head>
     <meta charset="utf-8" />
     <title>수업방식</title>
+    <script type="text/javascript">
+      function check() {
+        if (f.uname.value == "") {
+          alert("이름을 입력해 주세요!!");
+          f.uname.focus();
+          return false;
+        }
+        if (f.umajor.value == "") {
+          alert("학과를 입력해 주세요!!");
+          f.umajor.focus();
+          return false;
+        }
+        if (f.memo.value == "") {
+          alert("희망이유를 입력해 주세요!!");
+          f.memo.focus();
+          return false;
+        }
+        return true;
+      }
+    </script>
   </head>
   <body>
-    <form action="/detail" method="POST">
+    <form name="f" action="/detail" method="POST" onsubmit="return check()">
       <hr width="600" align="center" color="orange" />
       <table width="500" border="0" align="center">
         <tr>
