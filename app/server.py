@@ -41,15 +41,17 @@ def detail():
 @app.route('/submit', methods = ['POST', 'GET'])
 def submit():
    if request.method == 'POST':
+      uname = request.form.get('이름')
+      umajor = request.form.get('전공')
       result = dict()
-      result['이름'] = request.form.get('uname')
-      result['전공'] = request.form.get('umajor')
-      result['학년'] = request.form.get('grade')
-      result['희망 수업 방식'] = request.form.get('class')
-      result['백신 접종 여부'] = request.form.get('completion')
-      result['접종 백신 종류'] = request.form.get('vaccine')
-      result['해당 수업방식 선호 이유'] = request.form.get('memo')
-      return render_template("submit.html",result = result)
+      result['이름'] = request.form.get('이름')
+      result['전공'] = request.form.get('전공')
+      result['학년'] = request.form.get('학년')
+      result['희망 수업 방식'] = request.form.get('희망')
+      result['백신 접종 여부'] = request.form.get('백신')
+      result['접종 백신 종류'] = request.form.get('접종')
+      result['해당 수업방식 선호 이유'] = request.form.get('해당')
+      return render_template("submit.html",result = result, uname=uname, umajor=umajor)
 
 if __name__ == '__main__':
    app.run(host="0.0.0.0", debug=True, port=80)
