@@ -45,7 +45,7 @@ def submit():
       result['백신 접종 여부'] = request.form.get('completion')
       result['접종 백신 종류'] = request.form.get('vaccine')
       result['해당 수업방식 선호 이유'] = request.form.get('memo')
-      return render_template("submit.html",result = result, uname=uname, Grade=Grade, umajor=umajor)
+      return render_template("submit.html",result = result, uname=uname, Grade=grade, umajor=umajor)
 
 if __name__ == '__main__':
    app.run(host="0.0.0.0", debug=True, port=80)
