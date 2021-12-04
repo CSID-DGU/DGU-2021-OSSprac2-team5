@@ -38,10 +38,9 @@ def detail():
       result['해당 수업방식 선호 이유'] = request.form.get('memo')
       return render_template("detail.html",result = result)
 
-@app.route('/submit', methods = ['POST', 'GET'])
+@app.route('/submit')
 def submit():
-   if request.method == 'POST':
-      return render_template("submit.html",result = result)
+   return render_template("submit.html",result = result)
 
 if __name__ == '__main__':
    app.run(host="0.0.0.0", debug=True, port=80)
