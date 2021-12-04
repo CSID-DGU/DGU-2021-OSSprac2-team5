@@ -42,7 +42,7 @@ def detail():
 def submit():
    uname = request.form.get('uname')
    umajor = request.form.get('umajor')
-   ugrade = request.form.get('ugrade')
+   ugrade = request.form.get('grade')
    if request.method == 'POST':
       result = dict()
       result['이름'] = request.form.get('uname')
