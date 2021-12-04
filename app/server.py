@@ -10,13 +10,13 @@ def main():
 def login():
    return render_template('login.html')
 
-@app.route('/sign_up')
+@app.route('/sign up')
 def sign():
-   return render_template('sign_up.html')
+   return render_template('sign up.html')
 
-@app.route('/application_form')
+@app.route('/application form')
 def apllication():
-   return render_template('application_form.html')
+   return render_template('application form.html')
 
 @app.route('/detail', methods = ['POST', 'GET'])
 def detail():
