@@ -1,34 +1,38 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-   <body>
-      <head>
-         <title>
-            login
-         </title>
-      </head>
+  <body>
+    <head>
+      <title>login</title>
+    </head>
 
-      <section>
-         <h1>OSSP 계정 로그인</h1>
-       </section>
+    <section>
+      <h1>OSSP 계정 로그인</h1>
+    </section>
 
-
-      {% if error %}
-         <p><strong>Error:</strong> {{ error }}  <!--error메시지 관련 부분 여기맞는지 확인필요-->
+    {% if error %}
+    <p>
+      <strong>Error:</strong> {{ error }}
+      <!--error메시지 관련 부분 여기맞는지 확인필요-->
       {% endif %}
+    </p>
 
-      <form action = "" method = "POST">
-         
-         <d1>
-            <dt>아이디:</dt>
-            <dd>
-               <input type="text" name = "username" value = "{{request.form.username}}"> 
-            </dd>
-            <dt>비밀번호:</dt>
-            <dd>
-               <input type="password" name="password">
-            </dd>>
-         </d1>
-         <p><input type = "submit" value = "Sign Up" />   <input type="submit" value="Login"></p>
-      </form>
-   </body>
+    <form action="" method="POST">
+      <d1>
+        <dt>아이디:</dt>
+        <dd>
+          <input
+            type="text"
+            name="username"
+            value="{{request.form.username}}"
+          />
+        </dd>
+        <dt>비밀번호:</dt>
+        <dd>
+          <input type="password" name="password" />
+        </dd>
+        >
+      </d1>
+      <p><input type="submit" value="Login" /></p>
+    </form>
+  </body>
 </html>
