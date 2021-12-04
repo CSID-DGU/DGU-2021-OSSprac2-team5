@@ -1,22 +1,15 @@
 <!doctype html>
 <html>
+   <head>
+      <title>Mainpage</title>
+   </head>
    <body>
    
-      <form action = "/result" method = "POST">
-         <p>Name <input type = "text" name = "Name" /></p>
-         <p>Student Number <input type = "text" name = "StudentNumber" /></p>
-         <p>Gender</p>
-            <label><input type="radio" name="Gender" value="Male"/>Male</label>
-            <label><input type="radio" name="Gender" value="Female"/>Female</label>
-         <p>Major <input type = "text" name = "Major" /></p>
-         <p>Programming Languages</p>
-            <label><input type="checkbox" name="languages" value="Python"/>Python</label>
-            <label><input type="checkbox" name="languages" value="Java"/>Java</label>
-            <label><input type="checkbox" name="languages" value="HTML"/>HTML</label>
-            <label><input type="checkbox" name="languages" value="C++"/>C++</label>
+      <p style = "font-size: 200%"><b>2022년 수업방식 설문조사</b></p>
+      <p>설문조사에 참여하시려면 로그인이 필요합니다<a href="{{ url_for('login') }}"><b>로그인</b></a></p>
 
-         <p><input type = "submit" value = "submit" /></p>
-      </form>
+      <p>설문조사에 참여하시려면 로그인이 필요합니다</p>
+      <p><button type="button" onclick="location.href='/login'">로그인</button></p>
       
    </body>
 </html>
