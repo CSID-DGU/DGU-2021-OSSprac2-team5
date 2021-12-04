@@ -38,7 +38,7 @@ def detail():
       result['해당 수업방식 선호 이유'] = request.form.get('memo')
       return render_template("detail.html",result = result)
 
-@app.route('/submit', methods = ['POST', 'GET'])
+@app.route('/submit')
 def submit():
    if request.method == 'POST':
       uname = request.form.get('이름')
